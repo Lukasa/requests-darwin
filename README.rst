@@ -40,3 +40,7 @@ License
 -------
 
 This code is available under the MIT license. See LICENSE for more details.
+
+.. _NSURLSession: https://developer.apple.com/library/mac/documentation/Foundation/Reference/NSURLSession_class/
+.. _Transport Adapter: http://docs.python-requests.org/en/master/user/advanced/#transport-adapters
+.. _urllib3: https://github.com/shazow/urllib3
