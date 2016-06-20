@@ -11,7 +11,8 @@ from requests.utils import get_encoding_from_headers
 
 from Foundation import (
     NSURLSessionConfiguration, NSURLSession, NSObject, NSMutableURLRequest,
-    NSURL, NSURLSessionResponseAllow
+    NSURL, NSURLSessionResponseAllow,
+    NSURLSessionAuthChallengePerformDefaultHandling
 )
 from PyObjCTools.KeyValueCoding import getKey
 
@@ -103,7 +104,9 @@ class _RequestsDelegate(NSObject):
 
         :returns: Nothing
         """
-        pass
+        # TODO: Here we'll handle all of auth, verify, and cert. For now, just
+        # do the default.
+        handler(NSURLSessionAuthChallengePerformDefaultHandling, None)
 
     def URLSession_task_didSendBodyData_totalBytesSent_totalBytesExpectedToSend_(self,
                                                                                  session,
