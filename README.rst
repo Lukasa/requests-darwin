@@ -1,4 +1,4 @@
-Requests-NSURLSession
+Requests-Darwin
 =====================
 
 Integration for the Darwin `NSURLSession`_ API for Requests.
@@ -16,7 +16,7 @@ Using Requests-NSURLSession is extremely simple:
 .. code-block:: python
 
     import requests
-    from requests_nsurlsession.adapter import NSURLSessionAdapter
+    from requests_darwin.adapter import NSURLSessionAdapter
 
     session = requests.Session()
     adapter = NSURLSessionAdapter()
